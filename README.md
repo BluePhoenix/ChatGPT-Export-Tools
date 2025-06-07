@@ -98,6 +98,30 @@ This tool is provided as-is for processing your own ChatGPT conversation exports
 
 The MIT License below covers the code itself, but does not override or modify any terms of service or privacy requirements from OpenAI or other services.
 
+## Security
+
+This project handles ChatGPT conversation exports which may contain sensitive information. Here are some security practices we follow:
+
+### For Users
+- The tools process data locally and don't transmit any data externally
+- All generated files (markdown, CSV, SQLite) are stored locally
+- Review your ChatGPT exports for sensitive information before processing
+- Be careful when sharing generated files
+
+### For Contributors
+Before submitting changes, please check for potential security issues:
+
+1. Using Gitleaks (recommended):
+```bash
+docker run --rm --name=gitleaks -v $PWD:/src zricethezav/gitleaks:v7.6.1 gitleaks protect --path=/src --verbose
+```
+
+2. Manual checks:
+- No hardcoded credentials or API keys
+- No sensitive data in commits or PRs
+- No external data transmission
+- No data storage outside local files
+
 ## License
 
 MIT License
