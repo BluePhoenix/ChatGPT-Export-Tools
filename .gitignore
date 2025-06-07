@@ -1,0 +1,6 @@
+.DS_Store
+exports/*
+
+*.csv
+*.md
+!README.md
