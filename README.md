@@ -11,6 +11,8 @@ When you export your ChatGPT conversations from OpenAI, you get a single JSON fi
 3. Create a searchable index of your conversations
 4. Help you decide which conversations to keep or delete
 
+For example, you can add the generated Markdown files into a private Obsidian vault.
+
 ## Features
 
 - **Chat Cleaner** (`chat_cleaner.py`): Generates a CSV overview of all conversations with metadata and previews
@@ -70,8 +72,6 @@ python scripts/split_chats.py conversations.json
 > ```
 > 
 > This will create a `chats.db` file with a full-text search index. Note that this feature is currently experimental and hasn't been thoroughly tested. The core markdown file generation works independently of this feature.
-> 
-> If you use this feature and encounter any issues, please report them in the project's issue tracker.
 
 Output:
 - `out/` directory containing individual markdown files (named `YYYY-MM-DD_title-slug.md`)
@@ -149,6 +149,8 @@ SOFTWARE.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+Note: Reviews may take time as this project is maintained in my free time.
 
 ## Acknowledgments
 
